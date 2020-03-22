@@ -33,7 +33,13 @@
     <link href="https://fonts.googleapis.com/css?family=Gugi&display=swap&subset=korean" rel="stylesheet">
     <!-- cdn 이용해서 리셋하기 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-    <link rel="stylesheet" href="./css/main.css">   
+    <link rel="stylesheet" href="./css/main.css">  
+    <link rel="stylesheet" media="(max-width: 1024px)" href="./css/main_medium.css"> 
+    <link rel="stylesheet" media="(max-width:768px)" href="./css/main_small.css">
+
+    <!-- 자바스크립트 연결 -->
+    <!-- defer 속성 이용해야되 -->
+    <script defer src="main.js"></script>
 </head>
 <body>
     <div class="body__container">
@@ -46,7 +52,7 @@
                     <div class="logo">
                         <a href="#">HyunHo-website</a>
                     </div>
-                    <ul class="main-menu">            
+                    <ul class="main-menu toggle">            
                         <li><a href="#">Personal</a></li>
                         <li><a href="#">Open source</a></li>
                         <li><a href="#">Business</a></li>
@@ -54,7 +60,7 @@
                     </ul>
                 </div>
 
-                <div class="sign-group float--right">
+                <div class="sign-group float--right toggle">
                     <div class="btn-group">
                         <a href="#" class="btn sign-in">Sign in</a>
                         <a href="#" class="btn btn--primary sign-up">Sign up</a>
@@ -69,6 +75,8 @@
                         <li><a href="#">Instagram</a></li>
                     </ul>
                 </div>
+
+                <div id="toggle-btn">Header Menu Toggle Button</div>
 
             </div>
         </header>
@@ -210,7 +218,7 @@
                     </ul>
 
                     <ul class="site-links float--left">
-                        <li>© 2020 GitHub, Inc.</li>
+                        <li>© 2020 hyunho, Inc.</li>
                         <li><a href="#">Terms</a></li>
                         <li><a href="#">Privacy</a></li>
                         <li><a href="#">Security</a></li>
